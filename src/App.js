@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import data from "./data/wat-departures.json";
 import moment from "moment";
-import { styles, Container, Col1 } from "./trainDeparturesStyles";
+import {
+  styles,
+  Container,
+  Col1,
+  Col2,
+  Col3,
+  SecondSp
+} from "./trainDeparturesStyles";
 
 class App extends Component {
   render() {
@@ -19,20 +26,25 @@ class App extends Component {
               }
             >
               <Col1>
-                {moment(service.scheduledInfo.scheduledTime).format("HH:mm")}
+                <span>
+                  {moment(service.scheduledInfo.scheduledTime).format("HH:mm")}
+                </span>
               </Col1>
-              <div>{service.destinationList[0]["crs"]}</div>
-              <div>
+              <Col2>
+                <span>{service.destinationList[0]["crs"]}</span>
+                <SecondSp>{service.serviceOperator}</SecondSp>
+              </Col2>
+              <Col3>
                 Plat.{service.scheduledInfo.scheduledPlatform
                   ? service.scheduledInfo.scheduledPlatform
                   : "--"}
-              </div>
-              <div>
-                {service.scheduledInfo.scheduledTime ===
-                service.realTimeUpdatesInfo.realTimeServiceInfo.realTime
-                  ? "On Time"
-                  : "Delayed"}
-              </div>
+                <SecondSp>
+                  {service.scheduledInfo.scheduledTime ===
+                  service.realTimeUpdatesInfo.realTimeServiceInfo.realTime
+                    ? "On Time"
+                    : "Delayed"}
+                </SecondSp>
+              </Col3>
             </div>
           );
         })}

@@ -35,3 +35,20 @@ export const Col1 = styled.div`
     font-weight: bold;
   }
 `;
+
+export const Col2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+`;
+
+export const SecondSp = styled.span`
+  font-size: 14px;
+  color: #8c9190;
+`;
+
+export const Col3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+`;
