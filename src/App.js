@@ -3,7 +3,10 @@ import data from "./data/wat-departures.json";
 
 class App extends Component {
   render() {
-    const allServices = data.services;
+    const allServices1 = data.services;
+    const allServices = allServices1.filter(
+      service => service.destinationList[0]["crs"] !== "WAT"
+    );
     return (
       <div>
         {allServices.map(service => {
