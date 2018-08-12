@@ -4,7 +4,7 @@ export const Container = styled.div`
   background-color: #8c9190;
   min-height: 600px;
   overflow-y: auto;
-  width: 50%;
+  width: 100%;
   margin-left: 7.5px;
   padding: 5px 15px 0;
   box-sizing: border-box;

@@ -48,7 +48,10 @@ class Service1 extends Component {
                             ).format("HH:mm")}
                       </Col1>
                       <Col2>
-                        <SecondSp>{stop.location.crs}</SecondSp>
+                        <SecondSp>
+                          <FontAwesomeIcon icon={faCircle} />-
+                          {stop.location.crs}
+                        </SecondSp>
                       </Col2>
                       <Col3>
                         Plat.
