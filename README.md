@@ -5,8 +5,9 @@
 ### Approach
 
 - This was my first time working with React.js so I needed to research it before I could begin working on this app.
-
+- I put some time in getting the routes working with BrowserRouter, but that took too long, so when I found hashRouter, I used it! The thing is that you see a hash in the url, if I had more time I would like to do the routing in a different way.
 - Lay-out the basic front-end to make sure the basic styling and elements are in place.
+- Research in `styled-components` and applied it to the app
 
 ### Instructions
 
@@ -59,6 +60,14 @@ As a User
 So I can see where one service stops,
 I would like to see all the stops of a service
 ```
+
+### Still to do
+
+- Make one service using different data.json files
+- Get rid of duplication
+- More research on Jest and testing React
+- better styling
+- getting rid of the hash in the url
 
 ## Problem description
 
