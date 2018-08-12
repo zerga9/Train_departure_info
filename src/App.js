@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import data from "./data/wat-departures.json";
 import moment from "moment";
-import { styles } from "./trainDeparturesStyles";
+import { styles, Container } from "./trainDeparturesStyles";
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
       service => service.destinationList[0]["crs"] !== "WAT"
     );
     return (
-      <div style={styles}>
+      <Container style={styles}>
         {allServices.map(service => {
           return (
             <div
@@ -36,7 +36,7 @@ class App extends Component {
             </div>
           );
         })}
-      </div>
+      </Container>
     );
   }
 }
