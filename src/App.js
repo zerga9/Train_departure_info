@@ -26,6 +26,12 @@ class App extends Component {
                   ? service.scheduledInfo.scheduledPlatform
                   : "--"}
               </div>
+              <div>
+                {service.scheduledInfo.scheduledTime ===
+                service.realTimeUpdatesInfo.realTimeServiceInfo.realTime
+                  ? "On Time"
+                  : "Delayed"}
+              </div>
             </div>
           );
         })}
