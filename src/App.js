@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import data from "./data/wat-departures.json";
 import moment from "moment";
+import { HashRouter } from "react-router-dom";
 import {
   styles,
   Container,
   Col1,
   Col2,
   Col3,
-  SecondSp
+  SecondSp,
+  LinkStyled
 } from "./trainDeparturesStyles";
 
 class App extends Component {
@@ -17,38 +19,54 @@ class App extends Component {
       service => service.destinationList[0]["crs"] !== "WAT"
     );
     return (
-      <Container style={styles}>
-        {allServices.map(service => {
-          return (
-            <div
-              key={
-                service.serviceIdentifier + service.destinationList[0]["crs"]
-              }
-            >
-              <Col1>
-                <span>
-                  {moment(service.scheduledInfo.scheduledTime).format("HH:mm")}
-                </span>
-              </Col1>
-              <Col2>
-                <span>{service.destinationList[0]["crs"]}</span>
-                <SecondSp>{service.serviceOperator}</SecondSp>
-              </Col2>
-              <Col3>
-                Plat.{service.scheduledInfo.scheduledPlatform
-                  ? service.scheduledInfo.scheduledPlatform
-                  : "--"}
-                <SecondSp>
-                  {service.scheduledInfo.scheduledTime ===
-                  service.realTimeUpdatesInfo.realTimeServiceInfo.realTime
-                    ? "On Time"
-                    : "Delayed"}
-                </SecondSp>
-              </Col3>
-            </div>
-          );
-        })}
-      </Container>
+      <div>
+        <HashRouter>
+          <div style={styles}>
+            <header>
+              <h1>
+                <ul>Departures from London Waterloo</ul>
+              </h1>
+            </header>
+            {allServices.map(service => {
+              return (
+                <Container
+                  key={
+                    service.serviceIdentifier +
+                    service.destinationList[0]["crs"]
+                  }
+                >
+                  <LinkStyled
+                    to={`/serviceDetails/${service.serviceIdentifier}`}
+                  >
+                    <Col1>
+                      <span>
+                        {moment(service.scheduledInfo.scheduledTime).format(
+                          "HH:mm"
+                        )}
+                      </span>
+                    </Col1>
+                    <Col2>
+                      <span>{service.destinationList[0]["crs"]}</span>
+                      <SecondSp>{service.serviceOperator}</SecondSp>
+                    </Col2>
+                    <Col3>
+                      Plat.{service.scheduledInfo.scheduledPlatform
+                        ? service.scheduledInfo.scheduledPlatform
+                        : "--"}
+                      <SecondSp>
+                        {service.scheduledInfo.scheduledTime ===
+                        service.realTimeUpdatesInfo.realTimeServiceInfo.realTime
+                          ? "On Time"
+                          : "Delayed"}
+                      </SecondSp>
+                    </Col3>
+                  </LinkStyled>
+                </Container>
+              );
+            })}
+          </div>
+        </HashRouter>
+      </div>
     );
   }
 }

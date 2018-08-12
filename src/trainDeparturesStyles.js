@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const styles = {
   fontFamily: "sans-serif",
@@ -7,6 +8,13 @@ export const styles = {
   width: "100%",
   padding: "5px 15px 0"
 };
+
+export const LinkStyled = styled(NavLink)`
+  text-decoration: none;
+  color: black;
+  display: flex;
+  width: 100%;
+`;
 
 export const Container = styled.div`
   width: 100%;
