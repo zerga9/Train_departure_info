@@ -11,6 +11,8 @@ import {
   SecondSp,
   LinkStyled
 } from "./trainDeparturesStyles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrain } from "@fortawesome/free-solid-svg-icons";
 
 class App extends Component {
   render() {
@@ -24,6 +26,7 @@ class App extends Component {
           <div style={styles}>
             <header>
               <h1>
+                <FontAwesomeIcon icon={faTrain} size="2x" />
                 <ul>Departures from London Waterloo</ul>
               </h1>
             </header>
