@@ -23,3 +23,15 @@ export const Container = styled.div`
   }
   background-color: white;
 `;
+
+export const Col1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-content: center;
+  justify-content: center;
+  span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+`;
