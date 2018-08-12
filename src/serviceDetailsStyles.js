@@ -63,3 +63,17 @@ export const SecondSp = styled.span`
   color: #8c9190;
   align: right;
 `;
+
+export const TrainDiv = styled.div`
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StationDiv = styled.div`
+  display: flex;
+  align-items: center;
+  color: #8c9190;
+`;

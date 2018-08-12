@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import data from "./data/WAT-service-origin-W92931-2018-04-24.json";
 import moment from "moment";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrain } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import {
   Container,
   styles,
@@ -9,7 +12,9 @@ import {
   Col2,
   Container2,
   Col3,
-  SecondSp
+  SecondSp,
+  TrainDiv,
+  StationDiv
 } from "./serviceDetailsStyles";
 
 class Service1 extends Component {
@@ -21,10 +26,14 @@ class Service1 extends Component {
         <Container>
           <TitleContainer style={styles}>
             <div>
-              <div>
-                <span>Waterloo to Basingstoke</span>
+              <TrainDiv>
+                <FontAwesomeIcon icon={faTrain} size="2x" />
+              </TrainDiv>
+
+              <StationDiv>
+                <span>Waterloo to BasingStoke</span>
                 <ul>operated by {data.service.serviceOperator}</ul>
-              </div>
+              </StationDiv>
               <div>
                 {allStops.map(function(stop) {
                   return (
