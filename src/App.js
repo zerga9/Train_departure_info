@@ -21,6 +21,11 @@ class App extends Component {
               <div>
                 {moment(service.scheduledInfo.scheduledTime).format("HH:mm")}
               </div>
+              <div>
+                Plat.{service.scheduledInfo.scheduledPlatform
+                  ? service.scheduledInfo.scheduledPlatform
+                  : "--"}
+              </div>
             </div>
           );
         })}
