@@ -66,8 +66,8 @@ I would like to see all the stops of a service
 
 ```
 As a User
-So I can see where one service stops,
-I would like to see all the stops of a service
+So I can see what time one service stops,
+I would like to see calling times of stops
 ```
 
 ### Still to do
