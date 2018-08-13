@@ -16,3 +16,10 @@ describe("Homepage got right content", function() {
     cy.contains("Departures from London Waterloo");
   });
 });
+
+describe("Homepage got right content", function() {
+  it('finds the content "Departures from London Waterloo "', function() {
+    cy.visit("http://localhost:3000/#/serviceDetails/W92931");
+    cy.contains("Waterloo to BasingStoke");
+  });
+});
