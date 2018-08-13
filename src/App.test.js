@@ -6,8 +6,10 @@ import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
 
-it("renders without crashing", () => {
-  shallow(<App />);
+describe("App", () => {
+  it("renders without crashing", () => {
+    shallow(<App />);
+  });
 });
 
 test("shows text onLoad", () => {

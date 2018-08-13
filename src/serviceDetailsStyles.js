@@ -1,4 +1,23 @@
 import styled from "styled-components";
+import { css } from "styled-components";
+
+export const media = {
+  large: (...args) => css`
+    @media (max-width: 992px) {
+      ${css(...args)};
+    }
+  `,
+  medium: (...args) => css`
+    @media (max-width: 768px) {
+      ${css(...args)};
+    }
+  `,
+  small: (...args) => css`
+    @media (max-width: 576px) {
+      ${css(...args)};
+    }
+  `
+};
 
 export const Container = styled.div`
   background-color: #8c9190;
@@ -70,6 +89,10 @@ export const TrainDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${media.small`
+   width: 100%;
+   margin-left: 0;
+ `};
 `;
 
 export const StationDiv = styled.div`
