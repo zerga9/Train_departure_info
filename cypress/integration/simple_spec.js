@@ -30,3 +30,12 @@ describe("Homepage got right content", function() {
     cy.contains("Waterloo to Shepperton");
   });
 });
+
+describe("Clicking changes url", function() {
+  it("clicking 'BSK' navigates to a new url", function() {
+    cy.visit("localhost:3000");
+
+    cy.contains("BSK").click();
+    cy.url().should("include", "/serviceDetails/W92931");
+  });
+});
