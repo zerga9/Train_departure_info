@@ -18,8 +18,15 @@ describe("Homepage got right content", function() {
 });
 
 describe("Homepage got right content", function() {
-  it('finds the content "Departures from London Waterloo "', function() {
+  it('finds the content "Waterloo to BasingStoke "', function() {
     cy.visit("http://localhost:3000/#/serviceDetails/W92931");
     cy.contains("Waterloo to BasingStoke");
+  });
+});
+
+describe("Homepage got right content", function() {
+  it('finds the content "Waterloo to Shepperton "', function() {
+    cy.visit("http://localhost:3000/#/serviceDetails/W92443");
+    cy.contains("Waterloo to Shepperton");
   });
 });
