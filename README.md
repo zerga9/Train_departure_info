@@ -14,13 +14,15 @@
 - Clone this repository
 - Run `npm install` to install the dependencies
 - Run `npm start` and go to localhost:3000 in your browser
-- To see tests run `npm test`
+- To see tests run Cypress in the terminal with `./node_modules/.bin/cypress open` and go to integration/simple_spec file to see the tests.
+- For Jest tests run `npm test`
 
 ### Technologies Used:
 
 - React.js
 - React Router Dom for routing
 - Styled Components and Fontawesom for styling
+- Cypress for testing
 - Jest for testing
 
 ### User Stories
