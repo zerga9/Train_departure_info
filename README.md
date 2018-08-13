@@ -15,7 +15,7 @@
 - Clone this repository
 - Run `npm install` to install the dependencies
 - Run `npm start` and go to localhost:3000 in your browser
-- To see tests run Cypress in the terminal with `./node_modules/.bin/cypress open` and go to integration/simple_spec file to see the tests.
+- To see tests run `npm start` and then run Cypress with `./node_modules/.bin/cypress open` and go to integration/simple_spec file to see the tests.
 
 ### Technologies Used:
 
@@ -23,6 +23,14 @@
 - React Router Dom for routing
 - Styled Components and Fontawesom for styling
 - Cypress for testing
+
+###### screenshot Homepage
+
+![image](https://user-images.githubusercontent.com/33194929/44009549-a42396c4-9ea4-11e8-8803-4e76d94b010e.png)
+
+###### screenshot ServicePage
+
+![image](https://user-images.githubusercontent.com/33194929/44009571-d3adbf46-9ea4-11e8-9c06-df1d6c5ea32c.png)
 
 ### User Stories
 
