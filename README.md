@@ -16,7 +16,6 @@
 - Run `npm install` to install the dependencies
 - Run `npm start` and go to localhost:3000 in your browser
 - To see tests run Cypress in the terminal with `./node_modules/.bin/cypress open` and go to integration/simple_spec file to see the tests.
-- For Jest tests run `npm test`
 
 ### Technologies Used:
 
@@ -24,7 +23,6 @@
 - React Router Dom for routing
 - Styled Components and Fontawesom for styling
 - Cypress for testing
-- Jest for testing
 
 ### User Stories
 
@@ -66,7 +64,7 @@ I would like to see all the stops of a service
 
 ### Still to do
 
-- Make one service using different data.json files
+- Make one service-page using different data.json files
 - Get rid of duplication
 - More research on Jest and testing React
 - better styling
