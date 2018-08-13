@@ -5,6 +5,7 @@
 ### Approach
 
 - This was my first time working with React.js so I needed to research it before I could begin working on this app.
+- First I started getting the information out of the departures json to implement in the Homepage, then started working on the routing. See if it worked with a test text and then getting all the info on the page for the 2 first services.
 - I put some time in getting the routes working with BrowserRouter, but that took too long, so when I found hashRouter, I used it! The thing is that you see a hash in the url, if I had more time I would like to do the routing in a different way.
 - Lay-out the basic front-end to make sure the basic styling and elements are in place.
 - Research in `styled-components` and applied it to the app
@@ -70,6 +71,8 @@ I would like to see all the stops of a service
 - More research on Jest and testing React
 - better styling
 - getting rid of the hash in the url
+- better research about responsive apps
+- use props...
 
 ## Problem description
 
