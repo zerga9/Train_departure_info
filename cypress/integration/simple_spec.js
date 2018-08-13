@@ -39,3 +39,12 @@ describe("Clicking changes url", function() {
     cy.url().should("include", "/serviceDetails/W92931");
   });
 });
+
+describe("Clicking changes url", function() {
+  it("clicking 'SHP' navigates to a new url", function() {
+    cy.visit("localhost:3000");
+
+    cy.contains("SHP").click();
+    cy.url().should("include", "/serviceDetails/W92443");
+  });
+});
